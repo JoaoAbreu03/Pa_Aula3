@@ -5,7 +5,7 @@ import java.util.Scanner;
  * There is always a message and an answer associated with a prompt. The answer is saved after the user pressed the
  * <code>ENTER</code> key.
  */
-public class AskUser {
+public class AskUser extends Thread {
 
     private final String message;
     private String answer;
@@ -38,4 +38,8 @@ public class AskUser {
         return answer;
     }
 
+    @Override
+    public void run() {
+
+    }
 }

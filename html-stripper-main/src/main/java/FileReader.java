@@ -5,7 +5,9 @@ import java.util.Scanner;
  * The FileReader class implements a file reader. The file path is specified in the constructor. The file can be then
  * read using the method {@link FileReader#readFile()}.
  */
-public class FileReader {
+public class FileReader implements Runnable {
+
+
     private final String path;
     private String file_content;
 
@@ -56,4 +58,8 @@ public class FileReader {
         return file_content;
     }
 
+    @Override
+    public void run() {
+
+    }
 }

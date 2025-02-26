@@ -2,7 +2,7 @@
  * The EditContent class contains the methods for editing the content of a string. The edits available are appending
  * (<code>0</code>) or prepending (<code>1</code>) strings to the original content.
  */
-public class EditContent {
+public class EditContent extends Thread {
 
     private static final int START = 1;
     private static final int END = 0;
@@ -46,5 +46,8 @@ public class EditContent {
         return this.file;
     }
 
-
+    @Override
+    public void run() {
+        addContent();
+    }
 }

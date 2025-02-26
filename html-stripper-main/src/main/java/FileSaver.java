@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -6,7 +7,7 @@ import java.io.IOException;
  * After the method {@link FileSaver#saveFile()} is called, the file with its contents is created in the specified
  * path.
  */
-public class FileSaver {
+public class FileSaver extends Thread {
 
     private final String path;
     private final String content;
@@ -41,5 +42,8 @@ public class FileSaver {
         }
     }
 
-
+    @Override
+    public void run() {
+        saveFile();
+    }
 }

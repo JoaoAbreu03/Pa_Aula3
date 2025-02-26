@@ -2,7 +2,7 @@
  * The HTMLStripper class implements the methods for stripping all the HTML tags from a string, transforming it into
  * plain text when the {@link HTMLStripper#stripHTML()} is called.
  */
-public class HTMLStripper {
+public class HTMLStripper extends Thread{
 
     private final String html_content;
     private final String scriptTagStart = "<script";
@@ -52,4 +52,8 @@ public class HTMLStripper {
         return stripped_content;
     }
 
+    @Override
+    public void run() {
+
+    }
 }
